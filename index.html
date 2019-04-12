@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	
+          body{
+            
+        background-color: #f77878;
+
+           }
+ 
+    .header{
+        background-color: #f77878;
+           
+      }
+      input {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 65%;
+            height: 40px;
+            font-size: 20px;
+          font-weight: bolder;
+            color: blue;
+        }
+        input:focus {
+        border-color: green;
+        }
+        .button{
+          width: 30%;
+          height: 45px;
+          border-radius: 10px;
+          border: 2px solid blue;
+          outline: none !important;
+          font-size: 20px;
+          background-color: blue;
+          color: white;
+          font-weight: bolder;
+
+        }
+        p{
+          color: green;
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        .overflowTest {
+            color: blue;
+       overflow-y: scroll;
+       height: 80px;
+}
+        .but{
+          width: 75%;
+        }
+        h4{
+          color: blue;
+        }
+       
+
+
+</style>
+</head>
+<body>
+
+      <div class="header" style=" height:75px;">
+        
+      </div>
+    <div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-4 header">
+      
+    </div>
+    <div class="col-lg-4 col-sm-12 text-center header">
+      <div class="container bg-white">
+      <br>
+
+        <h4 class="text-center">Register</h4>
+      <br>
+          <br>
+         <input type="text" placeholder="Username" name="username" id="username">
+
+          <br>
+          <br>
+         <input type="email" placeholder="Email" name="email" id="email"><br><br>
+ 
+         <input type="password" placeholder="password" name="password" id="password"><br><br>
+         <input type="password" placeholder="Confirm-password" name="password" id="repassword"><br><br><br>
+       <input type="button" class="button" value="submit" onclick="glaro()">
+       <br>
+       <br><br><br>
+       <hr class="border">
+      </div>
+    </div>
+    <div class="col-lg-4 header">
+      
+    </div>
+    
+  </div></div>
+  <div class="header" style=" height:75px;">
+    
+  </div>
+  
+
+</body>
+<script type="text/javascript">
+
+	function glaro(){
+		var username=document.getElementById('username').value;
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+    var repassword=document.getElementById('repassword').value;
+
+var atposition=email.indexOf("@");
+var dotposition=email.lastIndexOf(".");
+
+
+
+
+
+
+if (username=="") {
+  alert("Enter your name")
+}
+
+
+else if (username.length>6) {
+  alert("Maximum six letters are accept in username ")
+
+}
+else if(email==""){
+  alert("Enter your email")
+}
+else if (atposition<3 ||  dotposition<atposition+3 || dotposition+2>email.length) {
+  alert("invalid email. please check your mail-id")
+}
+else if(password=="" || repassword==""){
+  alert("Enter your password")
+
+}
+
+else if (password!=repassword) {
+  alert("Your password is mismatch. Please check your password")
+
+}
+
+else{
+  alert("Register successfully")
+}
+
+
+
+
+
+
+   
+
+//     var atposition=str.indexOf("@");
+//     var dotposition=str.lastindexOf(".");
+
+// if(email==""){
+//   window.alert("Enter email")
+
+// }
+// else if (atposition<1 || dotposition<1 || atposition>dotposition+2) {}{
+//   alert("valid")
+
+// }
+// else{
+//   alert("invalid")
+
+// }
+
+
+
+// else if(password=='' && repassword=='') {
+//   alert("Enter password ")
+//  }
+//  else if(password!=repassword){
+//   window.alert("password incorrect")
+// }
+}
+</script>
+
+</html>
